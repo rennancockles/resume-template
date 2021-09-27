@@ -1,5 +1,5 @@
 <template>
-  <v-list>
+  <v-list class="grey darken-3" dark>
     <v-subheader>Idiomas</v-subheader>
 
     <v-list-item>

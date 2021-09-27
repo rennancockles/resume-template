@@ -1,35 +1,28 @@
 <template>
   <v-app class="printable">
-    <v-app-bar
-      app
-      dark
-      clipped-left
-      color="#6A76AB"
-      prominent
-    >
-      <v-toolbar-title>
-        Rennan Cockles
-        <div class="subheading">
-          Software Engineer / Data Engineer
-        </div>
-      </v-toolbar-title>
-    </v-app-bar>
-
-    <v-navigation-drawer
-      app
-      dark
-      clipped
-      width=300
-    >
-      <Contact/>
-      <Languages/>
-      <Certifications/>
-    </v-navigation-drawer>
-
     <v-main>
-      <Summary/>
-      <Education/>
-      <WorkExperience/>
+      <v-container fluid class="pa-0">
+        <v-row no-gutters class="my-nav white--text elevation-5">
+          <v-col cols="12">
+            Rennan Cockles
+            <div class="subheading">
+              Software Engineer / Data Engineer
+            </div>
+          </v-col>
+        </v-row>
+        <v-row no-gutters>
+          <v-col cols="3" class="grey darken-3">
+            <Contact/>
+            <Languages/>
+            <Certifications/>
+          </v-col>
+          <v-col cols="9">
+            <Summary/>
+            <Education/>
+            <WorkExperience/>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -63,22 +56,23 @@ export default {
 <style>
 .printable {
   -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .wrap-text {
   word-wrap: break-word;
 }
 
-.v-toolbar--prominent .v-toolbar__content .v-toolbar__title {
+.my-nav {
   align-self: center;
   text-align: center;
   font-size: 3rem;
   padding: 0;
-  margin: auto;
+  background-color: #6A76AB;
 }
 
-.v-toolbar--prominent .v-toolbar__content .v-toolbar__title .subheading{
-  text-align: right;
+.my-nav .subheading {
+  text-align: center;
   font-size: 1.15rem;
   padding-right: 5px;
 }
@@ -89,5 +83,11 @@ export default {
 }
 .theme--dark.v-subheader {
   color: #fff;
+}
+
+@media print {
+  .my-nav.elevation-5{
+    box-shadow: none !important;
+  }
 }
 </style>
