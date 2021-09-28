@@ -4,22 +4,22 @@
       <v-container fluid class="pa-0">
         <v-row no-gutters class="my-nav white--text elevation-5">
           <v-col cols="12">
-            Rennan Cockles
+            {{jsonData.name}}
             <div class="subheading">
-              Software Engineer / Data Engineer
+              {{jsonData.title}}
             </div>
           </v-col>
         </v-row>
         <v-row no-gutters>
           <v-col cols="3" class="grey darken-3">
-            <Contact/>
-            <Languages/>
-            <Certifications/>
+            <Contact :data="jsonData.contact"/>
+            <Languages :data="jsonData.languages"/>
+            <Certifications :data="jsonData.certifications"/>
           </v-col>
           <v-col cols="9">
-            <Summary/>
-            <Education/>
-            <WorkExperience/>
+            <Summary :summary="jsonData.summary"/>
+            <Education :data="jsonData.education"/>
+            <WorkExperience :data="jsonData.workExperience"/>
           </v-col>
         </v-row>
       </v-container>
@@ -28,12 +28,13 @@
 </template>
 
 <script>
-import Contact from './components/Contact'
-import Languages from './components/Languages'
-import Certifications from './components/Certifications'
-import Summary from './components/Summary'
-import Education from './components/Education'
-import WorkExperience from './components/WorkExperience'
+import Contact from '@/components/sections/Contact'
+import Languages from '@/components/sections/Languages'
+import Certifications from '@/components/sections/Certifications'
+import Summary from '@/components/sections/Summary'
+import Education from '@/components/sections/Education'
+import WorkExperience from '@/components/sections/WorkExperience'
+import json from './data/pt.json'
 
 export default {
   name: 'App',
@@ -48,7 +49,7 @@ export default {
   },
 
   data: () => ({
-    //
+    jsonData: json
   })
 }
 </script>
@@ -87,6 +88,9 @@ export default {
 
 @media print {
   .my-nav.elevation-5{
+    box-shadow: none !important;
+  }
+  .v-application .my-card{
     box-shadow: none !important;
   }
 }
