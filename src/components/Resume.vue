@@ -1,26 +1,16 @@
 <template>
-  <v-container fluid class="pa-0">
-    <v-row no-gutters class="my-nav white--text elevation-5">
-      <v-col cols="12">
-        {{data.name}}
-        <div class="subheading">
-          {{data.title}}
-        </div>
-      </v-col>
-    </v-row>
-    <v-row no-gutters>
-      <v-col cols="3" class="grey darken-3">
-        <Contact :data="data.contact"/>
-        <Languages :data="data.languages"/>
-        <Certifications :data="data.certifications"/>
-      </v-col>
-      <v-col cols="9">
-        <Summary :summary="data.summary"/>
-        <Education :data="data.education"/>
-        <WorkExperience :data="data.workExperience"/>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-row no-gutters>
+    <v-col cols="3" class="grey darken-3">
+      <Contact :data="data.contact"/>
+      <Languages :data="data.languages"/>
+      <Certifications :data="data.certifications"/>
+    </v-col>
+    <v-col cols="9">
+      <Summary :summary="data.summary"/>
+      <Education :data="data.education"/>
+      <WorkExperience :data="data.workExperience"/>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -40,10 +30,6 @@ export default {
       default: function () {
         return {}
       }
-    },
-    language: {
-      type: String,
-      default: 'pt'
     }
   },
 
@@ -54,10 +40,6 @@ export default {
     Summary,
     Education,
     WorkExperience
-  },
-
-  created () {
-    this.$i18n.locale = this.language
   }
 }
 </script>
