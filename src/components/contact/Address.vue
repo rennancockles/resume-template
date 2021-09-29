@@ -5,7 +5,7 @@
     </v-list-item-icon>
 
     <v-list-item-content>
-      <v-list-item-title>Endereço</v-list-item-title>
+      <v-list-item-title>{{ $t('address') }}</v-list-item-title>
       <v-list-item-subtitle class="wrap-text" v-text="address.line1"></v-list-item-subtitle>
       <v-list-item-subtitle class="wrap-text" v-text="address.line2"></v-list-item-subtitle>
     </v-list-item-content>

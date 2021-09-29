@@ -7,7 +7,17 @@ module.exports = {
         return args
       })
   },
+
   transpileDependencies: [
     'vuetify'
-  ]
+  ],
+
+  pluginOptions: {
+    i18n: {
+      locale: 'pt',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: true
+    }
+  }
 }

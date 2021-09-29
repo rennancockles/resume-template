@@ -4,7 +4,7 @@
   class="grey darken-3"
   dark
   >
-    <v-subheader>Contato</v-subheader>
+    <v-subheader>{{ $t('contact') }}</v-subheader>
 
     <Address :address="data.address"/>
     <Phone :phone="data.phone"/>

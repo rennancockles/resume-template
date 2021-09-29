@@ -9,7 +9,7 @@
     </v-list-item-icon>
 
     <v-list-item-content>
-      <v-list-item-title>Telefone</v-list-item-title>
+      <v-list-item-title>{{ $t('phone') }}</v-list-item-title>
       <v-list-item-subtitle class="wrap-text" v-text="phone"></v-list-item-subtitle>
     </v-list-item-content>
   </v-list-item>

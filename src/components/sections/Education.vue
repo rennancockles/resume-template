@@ -7,7 +7,7 @@
   shaped
   elevation="2"
   >
-    <v-card-title>Formação</v-card-title>
+    <v-card-title>{{ $t('education') }}</v-card-title>
 
     <v-card-text>
       <v-list>

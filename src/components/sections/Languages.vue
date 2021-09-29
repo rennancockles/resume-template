@@ -4,7 +4,7 @@
   class="grey darken-3"
   dark
   >
-    <v-subheader>Idiomas</v-subheader>
+    <v-subheader>{{ $t('languages') }}</v-subheader>
 
     <v-list-item
     three-line
@@ -50,10 +50,6 @@ export default {
         return item.language && item.level
       })
     }
-  },
-
-  data: () => ({
-    //
-  })
+  }
 }
 </script>

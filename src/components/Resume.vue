@@ -54,6 +54,10 @@ export default {
     Summary,
     Education,
     WorkExperience
+  },
+
+  created () {
+    this.$i18n.locale = this.language
   }
 }
 </script>

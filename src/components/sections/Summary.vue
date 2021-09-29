@@ -7,7 +7,7 @@
   shaped
   elevation="2"
   >
-    <v-card-title>Resumo</v-card-title>
+    <v-card-title>{{ $t('summary') }}</v-card-title>
 
     <v-card-text>
       <p v-for="(line, i) in summaryLines" :key="i" v-text="line"></p>

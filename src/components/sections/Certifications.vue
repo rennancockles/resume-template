@@ -4,7 +4,7 @@
   class="grey darken-3"
   dark
   >
-    <v-subheader>Certificados</v-subheader>
+    <v-subheader>{{ $t('certifications') }}</v-subheader>
 
     <v-list-item
     three-line
