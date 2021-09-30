@@ -11,48 +11,56 @@
 
     <v-card-text>
       <v-list>
-        <v-list-item
-        three-line
-        v-for="(item, i) in filteredData"
-        :key="i"
-        >
-          <v-list-item-icon>
-            <v-list-item-title
-            v-text="formatDate(item.startDate, item.endDate)"
-            ></v-list-item-title>
+        <v-container fluid class="pa-0">
+          <v-list-item
+          three-line
+          class="px-0"
+          v-for="(item, i) in filteredData"
+          :key="i"
+          >
+            <v-row no-gutters>
+              <v-col cols="3">
+                <v-list-item-icon>
+                  <v-list-item-title
+                  v-text="formatDate(item.startDate, item.endDate)"
+                  ></v-list-item-title>
 
-            <v-list-item-subtitle
-            class="wrap-text"
-            v-text="item.location"
-            ></v-list-item-subtitle>
+                  <v-list-item-subtitle
+                  class="wrap-text"
+                  v-text="item.location"
+                  ></v-list-item-subtitle>
 
-            <v-list-item-subtitle v-if="item.remote">
-              • Remoto
-            </v-list-item-subtitle>
-          </v-list-item-icon>
+                  <v-list-item-subtitle v-if="item.remote">
+                    • {{ $t('remote') }}
+                  </v-list-item-subtitle>
+                </v-list-item-icon>
+              </v-col>
 
-          <v-list-item-content>
-            <v-list-item-title
-            v-text="item.employer"
-            ></v-list-item-title>
+              <v-col cols="9">
+                <v-list-item-content>
+                  <v-list-item-title
+                  v-text="item.employer"
+                  ></v-list-item-title>
 
-            <v-list-item-subtitle
-            class="wrap-text"
-            v-text="item.position"
-            ></v-list-item-subtitle>
+                  <v-list-item-subtitle
+                  class="wrap-text"
+                  v-text="item.position"
+                  ></v-list-item-subtitle>
 
-            <v-list-item-action-text
-            class="wrap-text"
-            v-text="item.description"
-            ></v-list-item-action-text>
+                  <v-list-item-action-text
+                  class="wrap-text"
+                  v-text="item.description"
+                  ></v-list-item-action-text>
 
-            <v-list-item-action-text
-            class="wrap-text"
-            v-text="item.tools"
-            ></v-list-item-action-text>
-          </v-list-item-content>
-        </v-list-item>
-
+                  <v-list-item-action-text
+                  class="wrap-text"
+                  v-text="item.tools"
+                  ></v-list-item-action-text>
+                </v-list-item-content>
+              </v-col>
+            </v-row>
+          </v-list-item>
+        </v-container>
       </v-list>
     </v-card-text>
   </v-card>
@@ -84,11 +92,11 @@ export default {
   },
 
   methods: {
-    formatDate: (startDate, endDate) => {
+    formatDate (startDate, endDate) {
       if (endDate) {
         return `${startDate} - ${endDate}`
       }
-      return `${startDate} - o momento`
+      return `${startDate} - ${this.$t('current')}`
     }
   }
 }
@@ -113,5 +121,9 @@ p {
 
 .v-list-item__action-text {
   margin-top: 10px;
+}
+
+.v-list-item__icon {
+  width: 100%;
 }
 </style>
