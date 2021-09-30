@@ -2,10 +2,13 @@
   "address": "Address",
   "certifications": "Certifications",
   "contact": "Contact",
+  "current": "current",
   "education": "Education",
   "email": "Email",
   "languages": "Languages",
   "phone": "Phone",
+  "print": "Print",
+  "remote": "Remote",
   "summary": "Summary",
   "workExperience": "Work Experience"
 }

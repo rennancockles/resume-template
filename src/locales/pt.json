@@ -2,10 +2,13 @@
   "address": "Endereço",
   "certifications": "Certificados",
   "contact": "Contato",
+  "current": "o momento",
   "education": "Formação",
   "email": "Email",
   "languages": "Idiomas",
   "phone": "Telefone",
+  "print": "Imprimir",
+  "remote": "Remoto",
   "summary": "Resumo",
   "workExperience": "Experiência"
 }
