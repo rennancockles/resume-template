@@ -3,7 +3,24 @@
     <v-main>
       <v-container fluid class="pa-0">
         <v-row no-gutters class="my-nav white--text elevation-5">
-          <v-col cols="8" offset="2">
+          <v-col
+          cols="2"
+          align-self="center"
+          class="pl-2 d-flex d-print-none justify-start"
+          >
+            <v-btn
+            id="print-btn"
+            outlined
+            dark
+            @click="printWindow()"
+            >
+              <v-icon left>
+                mdi-printer-outline
+              </v-icon>
+              {{$t('print')}}
+            </v-btn>
+          </v-col>
+          <v-col cols="8" class="mx-auto">
             {{jsonData.name}}
             <div class="subheading">
               {{jsonData.title}}
@@ -82,6 +99,9 @@ export default {
       } else {
         this.locale = this.localeData[0]
       }
+    },
+    printWindow () {
+      window.print()
     }
   },
 
@@ -130,7 +150,35 @@ export default {
   color: #fff;
 }
 
+#print-btn {
+  border-color: rgba(255, 255, 255, 0.27);
+}
+
+#print-btn:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+#print-btn:hover::before {
+  opacity: 0;
+}
+
 @media print {
+  /* @page {
+    margin: 0;
+    padding: 0;
+    size: A4;
+  }
+  html {
+    height: 125%;
+    width: 125%;
+
+    transform: translate(-10%, -10%) scale(0.8, 0.8);
+    -moz-transform: translate(-10%, -10%) scale(0.8, 0.8);
+    -ms-transform: translate(-10%, -10%) scale(0.8, 0.8);
+    -webkit-transform: translate(-10%, -10%) scale(0.8, 0.8);
+    -o-transform: translate(-10%, -10%) scale(0.8, 0.8);
+  } */
+
   .my-nav.elevation-5{
     box-shadow: none !important;
   }
