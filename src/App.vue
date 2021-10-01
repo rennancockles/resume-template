@@ -129,6 +129,10 @@ export default {
   font-size: 3rem;
   padding: 0;
   background-color: #6A76AB;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .my-nav .subheading {
