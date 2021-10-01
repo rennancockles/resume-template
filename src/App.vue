@@ -150,6 +150,14 @@ export default {
   color: #fff;
 }
 
+.v-list-item__icon {
+  margin-right: 10px !important;
+}
+
+.v-list-item--three-line .wrap-text {
+  -webkit-line-clamp: 3;
+}
+
 #print-btn {
   border-color: rgba(255, 255, 255, 0.27);
 }

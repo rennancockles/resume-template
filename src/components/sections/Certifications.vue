@@ -18,7 +18,8 @@
       </v-list-item-icon>
 
       <v-list-item-content>
-        <v-list-item-title>{{item.date}} - {{item.org}}</v-list-item-title>
+        <v-list-item-subtitle class="white--text">{{item.date}}</v-list-item-subtitle>
+        <v-list-item-title>{{item.org}}</v-list-item-title>
         <v-list-item-subtitle class="wrap-text">{{item.name}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
