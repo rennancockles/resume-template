@@ -171,12 +171,12 @@ export default {
 }
 
 @media print {
-  /* @page {
+  @page {
     margin: 0;
     padding: 0;
     size: A4;
   }
-  html {
+  /* html {
     height: 125%;
     width: 125%;
 

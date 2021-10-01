@@ -49,13 +49,23 @@
 
                   <v-list-item-action-text
                   class="wrap-text"
-                  v-text="item.description"
-                  ></v-list-item-action-text>
+                  >
+                    <p
+                    v-for="(line, i) in splitLines(item.description)"
+                    :key="i"
+                    v-text="line"
+                    ></p>
+                  </v-list-item-action-text>
 
                   <v-list-item-action-text
                   class="wrap-text"
-                  v-text="item.tools"
-                  ></v-list-item-action-text>
+                  v-if="item.tools"
+                  >
+                    <span class="font-weight-bold">
+                      {{$t('workTools')}}:
+                    </span>
+                    {{item.tools}}
+                  </v-list-item-action-text>
                 </v-list-item-content>
               </v-col>
             </v-row>
@@ -97,6 +107,9 @@ export default {
         return `${startDate} - ${endDate}`
       }
       return `${startDate} - ${this.$t('current')}`
+    },
+    splitLines (text) {
+      return text.split('\n')
     }
   }
 }
@@ -104,7 +117,6 @@ export default {
 
 <style scoped>
 p {
-  text-indent: 1rem;
   margin: 0;
 }
 
