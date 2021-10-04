@@ -24,3 +24,4 @@ pnpm-debug.log*
 
 *.json
 !**/locales/*.json
+!**/data/template.json

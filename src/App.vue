@@ -82,7 +82,7 @@ export default {
       const context = require.context('@/data', true, /[A-Za-z0-9-_,\s]+\.json$/i)
       context.keys().forEach(key => {
         const matched = key.match(/([A-Za-z0-9-_]+)\./i)
-        if (matched && matched.length > 1) {
+        if (matched && matched.length > 1 && matched[1] !== 'template') {
           const locale = matched[1]
           this.locales.push(locale)
           this.localeData[locale] = context(key)
