@@ -19,7 +19,7 @@
           :key="i"
           >
             <v-list-item-content
-            class="stacked-view hidden-sm-and-up"
+            class="stacked-view d-print-none hidden-sm-and-up"
             >
               <v-list-item-title
               v-text="item.title"

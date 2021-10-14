@@ -6,18 +6,25 @@
       :activeLocale="locale"
       @changeLocale="changeLocale"
       @print="print"
+      class="hidden-print-only"
+    />
+    <ResumePrint
+      :data="jsonData"
+      class="hidden-screen-only"
     />
   </v-app>
 </template>
 
 <script>
 import Resume from '@/components/Resume'
+import ResumePrint from '@/components/ResumePrint'
 
 export default {
   name: 'App',
 
   components: {
-    Resume
+    Resume,
+    ResumePrint
   },
 
   data: () => ({
