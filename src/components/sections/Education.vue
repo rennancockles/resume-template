@@ -18,7 +18,33 @@
           v-for="(item, i) in filteredData"
           :key="i"
           >
-            <v-row no-gutters>
+            <v-list-item-content
+            class="stacked-view hidden-sm-and-up"
+            >
+              <v-list-item-title
+              v-text="item.title"
+              ></v-list-item-title>
+
+              <v-list-item-subtitle
+              class="wrap-text"
+              v-text="item.org"
+              ></v-list-item-subtitle>
+
+              <v-list-item-subtitle
+              class="wrap-text"
+              v-text="item.location"
+              ></v-list-item-subtitle>
+
+              <v-list-item-subtitle
+              class="wrap-text"
+              v-text="formatDate(item.startDate, item.endDate)"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-row
+            no-gutters
+            class="normal-view hidden-xs-only"
+            >
               <v-col cols="3">
                 <v-list-item-icon>
                   <v-list-item-title
@@ -87,27 +113,21 @@ export default {
 </script>
 
 <style scoped>
-p {
-  text-indent: 1rem;
-  margin: 0;
+.v-list-item__content.stacked-view .v-list-item__title {
+  font-size: 3vw;
+}
+.v-list-item__content.stacked-view .v-list-item__subtitle {
+  font-size: 2.625vw;
 }
 
-.v-list-item__icon {
+div.normal-view .v-list-item__icon {
   flex-wrap: wrap;
   width: 150px;
+  width: 100%;
 }
-
-.v-list-item__content {
+div.normal-view .v-list-item__content {
   margin: 16px 0 16px 32px;
   padding: 0;
   align-self: flex-start;
-}
-
-.v-list-item__action-text {
-  margin-top: 10px;
-}
-
-.v-list-item__icon {
-  width: 100%;
 }
 </style>
