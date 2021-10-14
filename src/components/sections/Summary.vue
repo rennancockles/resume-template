@@ -39,5 +39,7 @@ export default {
 p {
   text-indent: 1rem;
   margin: 0;
+  font-size: min(2.625vw, 0.875rem);
+  line-height: min(4vw, 1.375rem);
 }
 </style>

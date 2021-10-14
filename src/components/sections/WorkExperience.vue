@@ -174,15 +174,12 @@ p {
   margin-top: 10px;
 }
 
-.v-list-item__content.stacked-view .v-list-item__title,
-.v-list-item__content.stacked-view .v-list-item__subtitle.employer {
+.v-list-item__content.stacked-view .v-list-item__title {
   font-size: 3vw;
 }
-.v-list-item__content.stacked-view .v-list-item__subtitle {
-  font-size: 2.625vw;
-}
+.v-list-item__content.stacked-view .v-list-item__subtitle,
 .v-list-item__content.stacked-view .v-list-item__action-text {
-  font-size: 2.5vw;
+  font-size: 2.625vw;
 }
 
 div.normal-view .v-list-item__icon {
