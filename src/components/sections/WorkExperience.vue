@@ -89,12 +89,12 @@
               <v-col cols="9">
                 <v-list-item-content>
                   <v-list-item-title
-                  v-text="item.employer"
+                  v-text="item.position"
                   ></v-list-item-title>
 
                   <v-list-item-subtitle
                   class="wrap-text"
-                  v-text="item.position"
+                  v-text="item.employer"
                   ></v-list-item-subtitle>
 
                   <v-list-item-action-text
