@@ -14,9 +14,9 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-title>
-        {{data.name}}
+        Rennan Cockles
         <div class="subheading">
-          {{data.title}}
+          Software Engineer | Machine Learning Engineer | Python Specialist
         </div>
       </v-toolbar-title>
 
